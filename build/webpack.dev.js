@@ -5,6 +5,14 @@ const common = require('./webpack.common');
 
 module.exports = function(env){
   return merge(common, {
+    module: {
+      rules: [
+        {
+          test: /\.ejs$/,
+          use: 'raw-loader'
+        }
+      ]
+    },
     entry: {
       app: path.resolve(__dirname, '../src/index')
     },
