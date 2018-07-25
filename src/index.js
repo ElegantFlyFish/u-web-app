@@ -2,6 +2,8 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-if(module.hot){
-    ReactDOM.render(<div>xxxxxx</div>, document.getElementById('app'));
-}
+console.log(module);
+ReactDOM.render(
+    <div>web app</div>, 
+    document.getElementById('app')
+);

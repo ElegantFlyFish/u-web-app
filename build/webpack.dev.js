@@ -5,14 +5,14 @@ const common = require('./webpack.common');
 
 module.exports = function(env){
   return merge(common, {
-    module: {
-      rules: [
-        {
-          test: /\.ejs$/,
-          use: 'raw-loader'
-        }
-      ]
-    },
+    // module: {
+    //   rules: [
+    //     {
+    //       test: /\.html$/,
+    //       use: 'raw-loader'
+    //     }
+    //   ]
+    // },
     entry: {
       app: path.resolve(__dirname, '../src/index')
     },
@@ -26,7 +26,7 @@ module.exports = function(env){
       hot:true,
       compress: true,
       host: '0.0.0.0',
-      port: 9000
+      port: 8989
     },
     plugins: [
       new webpack.NamedModulesPlugin(),

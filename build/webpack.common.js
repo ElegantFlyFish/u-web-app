@@ -19,16 +19,13 @@ module.exports = {
     */
     //new ClearWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'U SPA',
+      title: 'u-web-app',
       filename: 'index.html',
-      ///template: path.parse(__dirname, '../src/index.ejs'),
-    }),
-    
+      template: path.resolve(__dirname, '../src/template.ejs'), 
+      inject: true
+    })
   ],
   resolve: {
-    extensions: ['.js', '.jsx'],
-    // alias:{
-
-    // }
+    extensions: ['.js', '.jsx']
   }
 }
