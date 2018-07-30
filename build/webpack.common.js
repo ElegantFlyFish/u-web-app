@@ -9,6 +9,11 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
+      },
+      {
+        test: /\.less$/,
+        include: path.resolve(__dirname, '../src/style'),
+        use: ['style-loader', 'css-loader', 'px2rem-loader?remUnit=100', 'less-loader']        
       }
     ]
   },

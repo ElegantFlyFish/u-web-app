@@ -2,8 +2,9 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-console.log(module);
+import App from './app';
+
 ReactDOM.render(
-    <div>web app</div>, 
+    <App/>, 
     document.getElementById('app')
 );
